@@ -1,0 +1,180 @@
+
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Bem-vindo à Lumnis Educacional!</title>
+
+  <!-- Favicon (ícone da aba do navegador) -->
+  <link rel="icon" href="icone.png" type="image/png">
+
+  <!-- FontAwesome para ícones -->
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" rel="stylesheet"/>
+
+  <style>
+    body {
+      margin: 0;
+      padding: 0;
+      background-color: rgba(0, 0, 0, 0.7);
+      height: 100vh;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      overflow: hidden;
+    }
+
+    /* Container para o fundo desfocado com rolagem para baixo */
+    .iframe-container {
+      position: absolute;
+      top: 50px; /* Desloca para baixo */
+      left: 0;
+      width: 100%;
+      height: calc(100% - 50px); /* Ajusta altura considerando o deslocamento */
+      filter: blur(8px); /* Desfoque do fundo */
+      z-index: -1; /* Coloca o iframe atrás do conteúdo */
+    }
+
+    iframe {
+      width: 100%;
+      height: 100%;
+      border: none;
+    }
+
+    .popup {
+      background: #fff;
+      width: 92%;
+      max-width: 420px;
+      padding: 35px 25px;
+      border-radius: 18px;
+      box-shadow: 0 0 40px rgba(0, 0, 0, 0.3);
+      text-align: center;
+      animation: popUp 0.6s ease;
+      position: relative;
+      z-index: 1;
+    }
+
+    @keyframes popUp {
+      0% { transform: scale(0.8); opacity: 0; }
+      100% { transform: scale(1); opacity: 1; }
+    }
+
+    .logo img {
+      width: 250px;
+      margin-bottom: 0px;
+    }
+
+    h1 {
+      font-size: 2em;
+      color: #222;
+      margin-bottom: 15px;
+    }
+
+    p {
+      color: #555;
+      font-size: 1.05em;
+      line-height: 1.6em;
+      margin-bottom: 25px;
+    }
+
+    .highlight {
+      background: #f1f8ff;
+      padding: 12px;
+      border-left: 4px solid #03a1b1; /* Cor da empresa */
+      margin-bottom: 20px;
+      font-size: 0.98em;
+      color: #003366;
+    }
+
+    .highlight a {
+      color: #03a1b1; /* Cor da empresa */
+      text-decoration: none;
+      font-weight: bold;
+    }
+
+    .highlight a:hover {
+      text-decoration: underline;
+    }
+
+    .highlight span {
+      display: inline-block;
+      margin-top: 8px;
+      font-style: italic;
+      color: #03a1b1; /* Cor da empresa */
+    }
+
+    .button {
+      background-color: #03a1b1; /* Cor da empresa */
+      color: white;
+      font-size: 1.1em;
+      padding: 13px 30px;
+      border: none;
+      border-radius: 10px;
+      cursor: pointer;
+      transition: background-color 0.3s ease;
+    }
+
+    .button:hover {
+      background-color: #027a92; /* Cor mais escura da empresa */
+    }
+
+    .link {
+      display: block;
+      margin-top: 18px;
+      color: #03a1b1; /* Cor da empresa */
+      text-decoration: none;
+      font-size: 0.95em;
+    }
+
+    .link:hover {
+      text-decoration: underline;
+    }
+
+    .social-icons {
+      margin-top: 25px;
+    }
+
+    .social-icons a {
+      margin: 0 12px;
+      font-size: 1.8em;
+      transition: transform 0.2s ease;
+    }
+
+    .social-icons a:hover {
+      transform: scale(1.2);
+    }
+
+    .fab.fa-instagram { color: #E1306C; }
+    .fab.fa-linkedin { color: #0077B5; }
+    .fab.fa-youtube { color: #FF0000; }
+    .fab.fa-facebook-f { color: #4267B2; }
+  </style>
+</head>
+<body>
+  <div class="popup">
+    <div class="logo">
+      <img src="Banner.png" alt="Logo Lumnis Educacional">
+    </div>
+
+    <h1>🎉 Bem-vindo(a) à Lumnis Educacional!</h1>
+
+    <p>
+      Estamos imensamente felizes por ter você com a gente!  
+      Obrigado por confiar na <strong>Lumnis Educacional</strong> — agora você faz parte de algo incrível.  
+    </p>
+
+    <div class="highlight">
+      <i class="fas fa-envelope email-icon"></i>
+      <a href="https://mail.google.com" target="_blank">Clique aqui para acessar seu e-mail</a><br>
+      Use o e-mail da compra para pegar sua senha de acesso à plataforma.<br><br>
+      <span>👉 Se já pegou, pode ignorar esta mensagem.</span>
+    </div>
+
+    <button class="button" onclick="window.open('https://lumnis.app.cativa.digital/auth/login', '_blank')">Entrar na Comunidade</button>
+    <a href="https://lumnis.app.cativa.digital/auth/login" class="link" target="_blank">Ou clique aqui para acessar manualmente</a>
+
+  
+  </div>
+</body>
+</html>
